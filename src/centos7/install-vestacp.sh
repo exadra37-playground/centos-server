@@ -11,14 +11,22 @@ set -e
     if [ ! -e "/etc/redhat-release" ]
         then
             printf "\nThis script must be used only in Centos\n"
+
+            exit 1
     fi
+
+# Set the script dir
+
+    script_dir=$( cd "$( dirname "$0" )" && pwd )
+
+# Install Git
+
+    sh "${script_dir}/../software/git.sh"
 
 # Install Vesta CP
 
     sh -c "$(curl -L http://vestacp.com/pub/vst-install-rhel.sh)"
 
-# Install Zsh
+# Install Tools
 
-    script_dir=$( cd "$( dirname "$0" )" && pwd )
-
-    "${script_dir}/../software/zsh.sh"
+    sh "${script_dir}/install-tools.sh"

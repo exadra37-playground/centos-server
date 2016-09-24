@@ -14,7 +14,7 @@ set -e
 
     if [ ! -e '/usr/bin/git' ]
         then
-            ./git.sh
+            sh "${script_dir}/git.sh"
     fi
 
 # Install
@@ -23,12 +23,12 @@ set -e
         then
             yum -y install zsh
 
-            "${script_dir}/../tasks/tracking-etc.sh" "Installed ZSH."
+            sh "${script_dir}/../tasks/tracking-etc.sh" "Installed ZSH."
 
             # Enhance Zsh with Oh-my-Zsh
             curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash -
 
-            "${script_dir}/../tasks/tracking-etc.sh" "Installed oh-my-zsh to Enhance ZSH."
+            sh "${script_dir}/../tasks/tracking-etc.sh" "Installed oh-my-zsh to Enhance ZSH."
 
             # reload shell
             . ~/.zshrc
