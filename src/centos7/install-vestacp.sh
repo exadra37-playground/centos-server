@@ -6,8 +6,26 @@
 
 set -e
 
-curl -O http://vestacp.com/pub/vst-install.sh
+# download
 
-bash vst-install.sh
+    mkdir -p /tmp/centos &&
+    curl -L https://gitlab.com/exadra37-bash/centos-server/repository/archive.tar.gz |
+    tar -zx -C centos --strip-components=1 &&
+    cd centos
 
-yum install htop
+
+# Install Git
+
+    ./software/.git.sh
+
+# Install Vesta CP
+
+    curl -L http://vestacp.com/pub/vst-install.sh | bash -
+
+# Install Zsh
+
+    ./software/zsh.sh
+
+# Cleanup
+
+    cd ~ && rm -rvf /tmp/centos
