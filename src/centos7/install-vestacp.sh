@@ -10,13 +10,17 @@ set -e
 
     script_dir=$( cd "$( dirname "$0" )" && pwd )
 
+# Update
+
+    yum -y update
+
 # Install Git
 
     "${script_dir}/../software/git.sh"
 
 # Install Vesta CP
 
-    curl -L http://vestacp.com/pub/vst-install.sh | bash -
+    bash < curl -L http://vestacp.com/pub/vst-install.sh
 
 # Install Zsh
 
