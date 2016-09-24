@@ -6,6 +6,10 @@
 
 set -e
 
+# Set the script dir
+
+    script_dir=$( cd "$( dirname "$0" )" && pwd )
+
 # Install
 
     if [ ! -e '/usr/bin/git' ]
@@ -15,5 +19,5 @@ set -e
             git config --global user.email "exadra37@gmail.com"
             git config --global user.name "Exadra37"
 
-            ./../tasks/start-tracking-etc.sh
+            "${script_dir}/../tasks/start-tracking-etc.sh"
     fi

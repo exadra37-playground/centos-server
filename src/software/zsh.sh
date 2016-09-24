@@ -6,6 +6,10 @@
 
 set -e
 
+# Set the script dir
+
+    script_dir=$( cd "$( dirname "$0" )" && pwd )
+
 # dependencies
 
     if [ ! -e '/usr/bin/git' ]
@@ -19,12 +23,12 @@ set -e
         then
             yum -y install zsh
 
-            ./../tasks/tracking-etc.sh "Installed ZSH."
+            "${script_dir}/../tasks/tracking-etc.sh" "Installed ZSH."
 
             # Enhance Zsh with Oh-my-Zsh
             curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash -
 
-            ./../tasks/tracking-etc.sh "Installed oh-my-zsh to Enhance ZSH."
+            "${script_dir}/../tasks/tracking-etc.sh" "Installed oh-my-zsh to Enhance ZSH."
 
             # reload shell
             . ~/.zshrc

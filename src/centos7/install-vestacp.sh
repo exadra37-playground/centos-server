@@ -6,9 +6,13 @@
 
 set -e
 
+# Set the script dir
+
+    script_dir=$( cd "$( dirname "$0" )" && pwd )
+
 # Install Git
 
-    ./../software/git.sh
+    "${script_dir}/../software/git.sh"
 
 # Install Vesta CP
 
@@ -16,4 +20,4 @@ set -e
 
 # Install Zsh
 
-    ./../software/zsh.sh
+    "${script_dir}/../software/zsh.sh"
