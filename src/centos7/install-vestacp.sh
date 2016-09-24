@@ -6,6 +6,13 @@
 
 set -e
 
+# Check OS
+
+    if [ ! -e "/etc/redhat-release" ]
+        then
+            printf "\nThis script must be used only in Centos\n"
+    fi
+
 # Set the script dir
 
     script_dir=$( cd "$( dirname "$0" )" && pwd )
@@ -20,7 +27,7 @@ set -e
 
 # Install Vesta CP
 
-    curl -L http://vestacp.com/pub/vst-install-rhel.sh | bash
+    sh -c "$(curl -L http://vestacp.com/pub/vst-install-rhel.sh)"
 
 # Install Zsh
 
