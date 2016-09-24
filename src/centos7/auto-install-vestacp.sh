@@ -9,8 +9,8 @@
 
     mkdir -p /tmp/centos &&
     curl -L https://gitlab.com/exadra37-bash/centos-server/repository/archive.tar.gz |
-    tar -zx -C centos --strip-components=1 &&
-    cd centos &&
+    tar -zx -C /tmp/centos --strip-components=1 &&
+    cd /tmp/centos &&
     ./src/centos7/install-vestacp.sh
 
 
