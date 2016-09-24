@@ -20,7 +20,7 @@ set -e
 
 # Install Vesta CP
 
-    curl -L http://vestacp.com/pub/vst-install.sh | bash --
+    curl -L http://vestacp.com/pub/vst-install-rhel.sh | bash
 
 # Install Zsh
 
