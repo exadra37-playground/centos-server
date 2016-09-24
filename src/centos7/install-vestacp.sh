@@ -6,13 +6,9 @@
 
 set -e
 
-# download
-
-    mkdir -p /tmp/centos && curl -L https://gitlab.com/exadra37-bash/centos-server/repository/archive.tar.gz | tar -zx -C centos --strip-components=1 && cd centos
-
 # Install Git
 
-    ./software/git.sh
+    ./../software/git.sh
 
 # Install Vesta CP
 
@@ -20,8 +16,4 @@ set -e
 
 # Install Zsh
 
-    ./software/zsh.sh
-
-# Cleanup
-
-    cd ~ && rm -rvf /tmp/centos
+    ./../software/zsh.sh
