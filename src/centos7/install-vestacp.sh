@@ -13,22 +13,12 @@ set -e
             printf "\nThis script must be used only in Centos\n"
     fi
 
-# Set the script dir
-
-    script_dir=$( cd "$( dirname "$0" )" && pwd )
-
-# Update
-
-    yum -y update
-
-# Install Git
-
-    "${script_dir}/../software/git.sh"
-
 # Install Vesta CP
 
     sh -c "$(curl -L http://vestacp.com/pub/vst-install-rhel.sh)"
 
 # Install Zsh
+
+    script_dir=$( cd "$( dirname "$0" )" && pwd )
 
     "${script_dir}/../software/zsh.sh"
