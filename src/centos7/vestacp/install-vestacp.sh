@@ -19,14 +19,10 @@ set -e
 
     script_dir=$( cd "$( dirname "$0" )" && pwd )
 
-# Install Git
+# Install Tools
 
-    sh "${script_dir}/../software/git.sh"
+    sh "${script_dir}/../install-packages.sh"
 
 # Install Vesta CP
 
-    sh -c "$(curl -L http://vestacp.com/pub/vst-install-rhel.sh)"
-
-# Install Tools
-
-    sh "${script_dir}/install-tools.sh"
+    sh -c "$(curl -L https://vestacp.com/pub/vst-install-rhel.sh)"

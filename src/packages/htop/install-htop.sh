@@ -10,14 +10,11 @@ set -e
 
     script_dir=$( cd "$( dirname "$0" )" && pwd )
 
-# Install
+# Install Vim
 
-    if [ ! -e '/usr/bin/git' ]
+    if [ ! -e '/usr/bin/htop' ]
         then
-            yum -y install git
+            yum -y install htop
 
-            git config --global user.email "exadra37@gmail.com"
-            git config --global user.name "Exadra37"
-
-            sh "${script_dir}/../tasks/start-tracking-etc.sh"
+            sh "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed Htop."
     fi

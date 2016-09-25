@@ -11,8 +11,7 @@
     curl -L https://gitlab.com/exadra37-bash/centos-server/repository/archive.tar.gz |
     tar -zx -C /tmp/centos --strip-components=1 &&
     cd /tmp/centos &&
-    ./src/centos7/install-vestacp.sh
-
+    sh src/centos7/vestacp/install-vestacp.sh
 
 # Cleanup
 

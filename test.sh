@@ -6,16 +6,8 @@
 
 set -e
 
+# Get SSH User
 
-# Set script dir
+    ssh_user="${1:-$(hostname)}"
 
-    script_dir=$( cd "$( dirname "$0" )" && pwd )
-
-# Secure SSH
-
-    sh "${script_dir}/../tasks/secure-ssh.sh"
-
-# Install Zsh
-
-    sh "${script_dir}/../software/zsh.sh"
-
+    echo $ssh_user
