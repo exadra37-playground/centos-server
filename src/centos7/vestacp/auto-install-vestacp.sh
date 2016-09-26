@@ -5,6 +5,12 @@
 # @link https://gitlab.com/exadra37-bash/centos-server
 
 
+# Enable Firewall
+# In case this is a fresh installation default Centos Firewall is disabled
+# This Firewall will be later replaced by CSF Firewall
+
+    systemctl start firewalld
+
 # download
 
     mkdir -p /tmp/centos &&

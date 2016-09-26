@@ -54,8 +54,8 @@ set -e
     systemctl disable firewalld
 
     # reload and eanble CSF firewall on boot
-    systemctl restart csf && systemctl enable csf
-    systemctl enable lfd && systemctl restart lfd
+    systemctl start csf && systemctl enable csf
+    systemctl start lfd && systemctl enable lfd
 
     # list CSF rule
     csf -l

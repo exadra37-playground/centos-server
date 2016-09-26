@@ -15,6 +15,6 @@ set -e
     # Install Perl if not installed yet
     sh "${script_dir}/install-perl.sh"
 
-    yum install -y perl-libwwww-perl
+    yum install -y perl-Time-HiRes
 
-    sh "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed Perl Lib WWW."
+    sh "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed Perl TimeHiRes."
