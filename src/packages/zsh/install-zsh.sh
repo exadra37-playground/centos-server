@@ -26,8 +26,5 @@ set -e
             curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash -
 
             sh "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed oh-my-zsh to Enhance ZSH."
-
-            # reload shell
-            . ~/.zshrc
     fi
 
