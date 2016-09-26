@@ -10,7 +10,8 @@ set -e
 
     script_dir=$( cd "$( dirname "$0" )" && pwd )
 
-# Install Vim
+# Install Remi Repository
+# https://support.rackspace.com/how-to/install-epel-and-additional-repositories-on-centos-and-red-hat/
 
     if ! yum repolist | grep -qi remi
         then

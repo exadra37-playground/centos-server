@@ -10,7 +10,7 @@ set -e
 
     script_dir=$( cd "$( dirname "$0" )" && pwd )
 
-# Install Vim
+# Install Epel Release
 
     if ! yum repolist | grep -qi epel/x86_64
         then
