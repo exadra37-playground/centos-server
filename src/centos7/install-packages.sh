@@ -18,6 +18,14 @@ set -e
 
     sh "${script_dir}/../tasks/ssh/secure-ssh.sh"
 
+# Install Epel Release
+
+    sh "${script_dir}/../packages/epel-release/install-epel-release.sh"
+
+# Install Remi Repository
+
+    sh "${script_dir}/../packages/remi/install-remi.sh"
+
 # Install Zsh
 
     sh "${script_dir}/../packages/zsh/install-zsh.sh"
