@@ -12,7 +12,7 @@ set -e
 
 # Install Git
 
-    sh "${script_dir}/../../packages/git/install-git.sh"
+    sh "${script_dir}/../packages/git/install-git.sh"
 
 # Secure SSH
 
