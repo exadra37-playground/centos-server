@@ -26,10 +26,6 @@ set -e
 
     sh "${script_dir}/../packages/remi/install-remi.sh"
 
-# Install Zsh
-
-    sh "${script_dir}/../packages/zsh/install-zsh.sh"
-
 # Install Htop
 
     sh "${script_dir}/../packages/htop/install-htop.sh"
@@ -38,3 +34,6 @@ set -e
 
     sh "${script_dir}/../packages/vim/install-vim.sh"
 
+# Install Zsh
+
+    sh "${script_dir}/../packages/zsh/install-zsh.sh"
