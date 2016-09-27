@@ -33,7 +33,3 @@ set -e
 # Install Vim
 
     sh "${script_dir}/../packages/vim/install-vim.sh"
-
-# Install Zsh
-
-    sh "${script_dir}/../packages/zsh/install-zsh.sh"
