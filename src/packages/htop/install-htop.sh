@@ -14,7 +14,7 @@ set -e
 
     if [ ! -e '/usr/bin/htop' ]
         then
-            yum -y install htop
+            yum install -y htop
 
             sh "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed Htop."
     fi
