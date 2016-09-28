@@ -14,7 +14,7 @@ set -e
 
     if [ ! -e '/usr/bin/git' ]
         then
-            sh "${script_dir}/../../packages/git/install-git.sh"
+            bash "${script_dir}/../../packages/git/install-git.sh"
     fi
 
 ## Start tracking etc folder

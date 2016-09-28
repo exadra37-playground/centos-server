@@ -61,32 +61,32 @@ set -e
     csf -l
 
     # Tracking changes
-    sh "${script_dir}/../../tasks/tracking-etc.sh" "Setup CSF Firewall."
+    bash "${script_dir}/../../tasks/tracking-etc.sh" "Setup CSF Firewall."
 
 
 
 ## Dependencies
 
-    # Install libwww-perl
+    # # Install libwww-perl
 
-        aptitude -y install libwww-perl
+    #     aptitude -y install libwww-perl
 
-        git status &&
-        git add --all &&
-        git commit -m 'libwww-perl have been installed.'
+    #     git status &&
+    #     git add --all &&
+    #     git commit -m 'libwww-perl have been installed.'
 
-    # Install unzip
+    # # Install unzip
 
-        aptitude -y install unzip
+    #     aptitude -y install unzip
 
-        git status &&
-        git add --all &&
-        git commit -m 'Unzip have been installed.'
+    #     git status &&
+    #     git add --all &&
+    #     git commit -m 'Unzip have been installed.'
 
-    # Install sendmail
+    # # Install sendmail
 
-        aptitude -y install sendmail
+    #     aptitude -y install sendmail
 
-        git status &&
-        git add --all &&
-        git commit -m 'Sendmail have been installed.'
+    #     git status &&
+    #     git add --all &&
+    #     git commit -m 'Sendmail have been installed.'

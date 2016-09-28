@@ -20,11 +20,11 @@ set -e
         then
             yum -y install zsh
 
-            sh "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed ZSH."
+            bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed ZSH."
 
             # Enhance Zsh with Oh-my-Zsh
             curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash -
 
-            sh "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed oh-my-zsh to Enhance ZSH."
+            bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed oh-my-zsh to Enhance ZSH."
     fi
 

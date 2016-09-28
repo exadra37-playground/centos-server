@@ -16,5 +16,5 @@ set -e
         then
             yum install -y epel-release
 
-            sh "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed Epel Release."
+            bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed Epel Release."
     fi

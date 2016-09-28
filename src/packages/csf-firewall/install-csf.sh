@@ -25,13 +25,13 @@ set -e
     curl -O https://download.configserver.com/csf.tgz &&
     tar -xzf csf.tgz &&
     cd csf &&
-    sh install.sh &&
+    bash install.sh &&
     perl /usr/local/csf/bin/csftest.pl && # test if CSF is ready to work
-    sh /usr/local/csf/bin/remove_apf_bfd.sh && # remove other installed firewalls
+    bash /usr/local/csf/bin/remove_apf_bfd.sh && # remove other installed firewalls
     rm -rfv /tmp/csf &&
     rm -rfv /tmp/csf.tgz &&
-    sh "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed CSF Firewall."
+    bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed CSF Firewall."
 
 # Setup CSF
 
-    sh "${script_dir}/setup-csf.sh"
+    bash "${script_dir}/setup-csf.sh"

@@ -21,12 +21,12 @@ set -e
 
 # Install Tools
 
-    sh "${script_dir}/../install-packages.sh"
+    bash "${script_dir}/../install-packages.sh"
 
 # Install Vesta CP
 
-    sh -c "$(curl -L https://vestacp.com/pub/vst-install-rhel.sh)"
+    curl -L https://vestacp.com/pub/vst-install-rhel.sh | bash -
 
 # Install Zsh
 
-    sh "${script_dir}/../../packages/zsh/install-zsh.sh"
+    bash "${script_dir}/../../packages/zsh/install-zsh.sh"

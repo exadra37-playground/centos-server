@@ -19,5 +19,5 @@ set -e
             git config --global user.email "${USER}@gmail.com"
             git config --global user.name "${USER}"
 
-            sh "${script_dir}/../../tasks/git/start-tracking-etc.sh"
+            bash "${script_dir}/../../tasks/git/start-tracking-etc.sh"
     fi

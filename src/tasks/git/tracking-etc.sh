@@ -14,7 +14,7 @@ set -e
 
     if [ ! -e '/etc/.git' ]
         then
-            sh "${script_dir}/start-tracking-etc.sh"
+            bash "${script_dir}/start-tracking-etc.sh"
     fi
 
 # tracking etc folder

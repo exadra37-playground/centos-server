@@ -12,24 +12,24 @@ set -e
 
 # Install Git
 
-    sh "${script_dir}/../packages/git/install-git.sh"
+    bash "${script_dir}/../packages/git/install-git.sh"
 
 # Secure SSH
 
-    sh "${script_dir}/../tasks/ssh/secure-ssh.sh"
+    bash "${script_dir}/../tasks/ssh/secure-ssh.sh"
 
 # Install Epel Release
 
-    sh "${script_dir}/../packages/epel-release/install-epel-release.sh"
+    bash "${script_dir}/../packages/epel-release/install-epel-release.sh"
 
 # Install Remi Repository
 
-    sh "${script_dir}/../packages/remi/install-remi.sh"
+    bash "${script_dir}/../packages/remi/install-remi.sh"
 
 # Install Htop
 
-    sh "${script_dir}/../packages/htop/install-htop.sh"
+    bash "${script_dir}/../packages/htop/install-htop.sh"
 
 # Install Vim
 
-    sh "${script_dir}/../packages/vim/install-vim.sh"
+    bash "${script_dir}/../packages/vim/install-vim.sh"
