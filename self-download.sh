@@ -21,7 +21,7 @@ vendor="/home/root/vendor/exadra37-bash/centos-server"
         local script_to_execute="${1}"
         local script_dir=$( cd "$( dirname "$0" )" && pwd )
 
-        bash "${script_dir}/centos7/${script_to_execute}.sh"
+        bash "${script_dir}/src/centos7/${script_to_execute}.sh"
     }
 
 # Self Download
