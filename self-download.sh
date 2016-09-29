@@ -6,7 +6,7 @@
 
 set -e
 
-vendor=/home/root/vendor/exadra37-bash/centos-server
+vendor="/home/root/vendor/exadra37-bash/centos-server"
 
 # Enable Firewall
 # In case this is a fresh installation default Centos Firewall is disabled
@@ -30,4 +30,4 @@ vendor=/home/root/vendor/exadra37-bash/centos-server
     curl -L https://gitlab.com/exadra37-bash/centos-server/repository/archive.tar.gz |
     tar -zx -C "${vendor}" --strip-components=1 &&
     cd "${vendor}" &&
-    selfExecute()
+    selfExecute() "${1}"
