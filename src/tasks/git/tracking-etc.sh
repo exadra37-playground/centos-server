@@ -10,7 +10,8 @@ set -e
 
     script_dir=$( cd "$( dirname "$0" )" && pwd )
 
-# check
+# checkcd /etc && git status && git add --all && git commit -m "Track changes after install memsql, docker and tweaks to Apache." && cd -
+
 
     if [ ! -e '/etc/.git' ]
         then

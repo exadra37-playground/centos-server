@@ -19,14 +19,8 @@ set -e
 
     script_dir=$( cd "$( dirname "$0" )" && pwd )
 
-# Install Tools
-
-    bash "${script_dir}/../install-packages.sh"
-
 # Install Vesta CP
 
     curl -LO https://vestacp.com/pub/vst-install-rhel.sh && bash vst-install-rhel.sh
 
-# Install Zsh
-
-    bash "${script_dir}/../../packages/zsh/install-zsh.sh"
+    bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed VestaCp."
