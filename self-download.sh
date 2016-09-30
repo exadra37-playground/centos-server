@@ -15,7 +15,7 @@ set -e
 
 # Self Execute Bash Scripts
 
-    function selfExecute()
+    function Self_Execute()
     {
         local script_to_execute="${1}"
         local script_dir=$( cd "$( dirname "$0" )" && pwd )
@@ -34,5 +34,6 @@ set -e
     mkdir -p "${vendor}" &&
     curl -L https://gitlab.com/exadra37-bash/centos-server/repository/archive.tar.gz |
     tar -zx -C "${vendor}" --strip-components=1 &&
-    cd "${vendor}" &&
-    selfExecute() "$@"
+    cd "${vendor}"
+
+    Self_Execute "$@"
