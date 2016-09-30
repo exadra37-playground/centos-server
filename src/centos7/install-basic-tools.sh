@@ -1,8 +1,8 @@
 #!/bin/bash
 # @author Exadra37(Paulo Silva) <exadra37ingmailpointcom>
 # @since  2016/09/24
-# @link   http://exadra37.com
-# @link https://gitlab.com/exadra37-bash/centos-server
+# @link   https://exadra37.com
+# @link   https://gitlab.com/exadra37-bash/centos-server
 
 set -e
 
@@ -21,4 +21,3 @@ set -e
 # Install Zsh
 
     bash "${script_dir}/../../packages/zsh/install-zsh.sh"
-

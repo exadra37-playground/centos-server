@@ -1,8 +1,8 @@
 #!/bin/bash
-# @author Exadra37 <exadra37@gmail.com>
-# @since 2016/09/29
-# @link exadra37.com
-# @link https://gitlab.com/exadra37-bash/centos-server
+# @author Exadra37(Paulo Silva) <exadra37ingmailpointcom>
+# @since  2016/09/29
+# @link   https://exadra37.com
+# @link   https://gitlab.com/exadra37-bash/centos-server
 
 set -e
 

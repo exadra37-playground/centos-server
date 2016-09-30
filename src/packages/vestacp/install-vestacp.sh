@@ -1,8 +1,8 @@
 #!/bin/bash
 # @author Exadra37(Paulo Silva) <exadra37ingmailpointcom>
 # @since  2016/09/24
-# @link   http://exadra37.com
-# @link https://gitlab.com/exadra37-bash/centos-server
+# @link   https://exadra37.com
+# @link   https://gitlab.com/exadra37-bash/centos-serverr
 
 set -e
 
@@ -15,9 +15,11 @@ set -e
             exit 1
     fi
 
+
 # Set the script dir
 
     script_dir=$( cd "$( dirname "$0" )" && pwd )
+
 
 # Install Vesta CP
 

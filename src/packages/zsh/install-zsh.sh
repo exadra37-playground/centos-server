@@ -1,8 +1,8 @@
 #!/bin/bash
-# @author Exadra37 <exadra37@gmail.com>
-# @since 2016/09/24
-# @link exadra37.com
-# @link https://gitlab.com/exadra37-bash/centos-server
+# @author Exadra37(Paulo Silva) <exadra37ingmailpointcom>
+# @since  2016/09/24
+# @link   https://exadra37.com
+# @link   https://gitlab.com/exadra37-bash/centos-server
 
 set -e
 
@@ -10,9 +10,11 @@ set -e
 
     script_dir=$( cd "$( dirname "$0" )" && pwd )
 
+
 # We need git to install Oh-My-Zsh
 
-    sh "${script_dir}/../git/install-git.sh"
+    bash "${script_dir}/../git/install-git.sh"
+
 
 # Install Zsh
 
@@ -27,4 +29,3 @@ set -e
 
             bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed oh-my-zsh to Enhance ZSH."
     fi
-

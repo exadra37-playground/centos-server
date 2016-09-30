@@ -1,22 +1,14 @@
 #!/bin/bash
-# @author Exadra37 <exadra37@gmail.com>
-# @since 2016/03/31
-# @link exadra37.com
-# @link https://gitlab.com/exadra37-bash/centos-server
+# @author Exadra37(Paulo Silva) <exadra37ingmailpointcom>
+# @since  2016/09/24
+# @link   https://exadra37.com
+# @link   https://gitlab.com/exadra37-bash/centos-server
 
 set -e
 
-# Set the script dir
+## Start tracking etc folder, but only if is not already being tracked
 
-    script_dir=$( cd "$( dirname "$0" )" && pwd )
-
-# We need git to be able to track etc folder
-
-    if [ ! -e '/usr/bin/git' ]
+    if [ ! -e '/etc/.git' ]
         then
-            bash "${script_dir}/../../packages/git/install-git.sh"
+            cd /etc && git init && git add --all && git commit -m 'Big Bang :)' && cd -
     fi
-
-## Start tracking etc folder
-
-    cd /etc && git init && git add --all && git commit -m 'Big Bang :)' && cd -

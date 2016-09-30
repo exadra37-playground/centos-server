@@ -1,8 +1,8 @@
 #!/bin/bash
-# @author Exadra37 <exadra37@gmail.com>
-# @since 2016/09/24
-# @link exadra37.com
-# @link https://gitlab.com/exadra37-bash/centos-server
+# @author Exadra37(Paulo Silva) <exadra37ingmailpointcom>
+# @since  2016/09/24
+# @link   https://exadra37.com
+# @link   https://gitlab.com/exadra37-bash/centos-server
 
 set -e
 
@@ -10,13 +10,11 @@ set -e
 
     script_dir=$( cd "$( dirname "$0" )" && pwd )
 
-# checkcd /etc && git status && git add --all && git commit -m "Track changes after install memsql, docker and tweaks to Apache." && cd -
 
+# We must have already a Git Repository... If not we will Init a new one
 
-    if [ ! -e '/etc/.git' ]
-        then
-            bash "${script_dir}/start-tracking-etc.sh"
-    fi
+    bash "${script_dir}/start-tracking-etc.sh"
+
 
 # tracking etc folder
 

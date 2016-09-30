@@ -10,6 +10,7 @@ set -e
 
     script_dir=$( cd "$( dirname "$0" )" && pwd )
 
+
 # Installing Perl
 
     if [ ! -e '/usr/bin/perl' ]
@@ -18,4 +19,3 @@ set -e
 
             bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed Perl."
     fi
-
