@@ -18,10 +18,10 @@ set -e
             then
                 if [ ! -z "${comment}" ]
                     then
-                        echo "${comment}" >> "${ssh_config}"
+                        printf "${comment}" >> "${ssh_config}"
                 fi
 
-                echo "${setting}" >> "${ssh_config}"
+                printf "${setting}" >> "${ssh_config}"
         fi
     }
 
