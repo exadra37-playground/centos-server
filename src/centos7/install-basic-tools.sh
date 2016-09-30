@@ -14,9 +14,10 @@ set -e
 
     bash "${script_dir}/../packages/vim/install-vim.sh"
 
+
 # Install Zsh
 
-    bash "${script_dir}/../../packages/zsh/install-zsh.sh"
+    bash "${script_dir}/../packages/zsh/install-zsh.sh"
 
 
 # Install Htop
