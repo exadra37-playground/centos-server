@@ -29,6 +29,7 @@ set -e
 # Get SSH User
 
     ssh_user="${1:-$(hostname)}"
+    ssh_config=/etc/ssh/sshd_config
 
 
 # Set the script dir
