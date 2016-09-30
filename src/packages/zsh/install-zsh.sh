@@ -29,3 +29,5 @@ set -e
 
             bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed oh-my-zsh to Enhance ZSH."
     fi
+
+exit 0

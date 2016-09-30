@@ -11,7 +11,7 @@ set -e
     script_dir=$( cd "$( dirname "$0" )" && pwd )
 
 
-# Install Vim
+# Install Htop
 
     if [ ! -e '/usr/bin/htop' ]
         then
@@ -19,3 +19,5 @@ set -e
 
             bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed Htop."
     fi
+
+exit 0

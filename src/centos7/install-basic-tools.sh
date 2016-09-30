@@ -10,10 +10,6 @@ set -e
 
     script_dir=$( cd "$( dirname "$0" )" && pwd )
 
-# Install Htop
-
-    bash "${script_dir}/../packages/htop/install-htop.sh"
-
 # Install Vim
 
     bash "${script_dir}/../packages/vim/install-vim.sh"
@@ -21,3 +17,8 @@ set -e
 # Install Zsh
 
     bash "${script_dir}/../../packages/zsh/install-zsh.sh"
+
+
+# Install Htop
+
+    bash "${script_dir}/../packages/htop/install-htop.sh"
