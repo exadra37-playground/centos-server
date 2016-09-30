@@ -8,7 +8,7 @@ set -e
 
 # function
 
-    Write_To_Ssh_Config
+    function Write_To_Ssh_Config()
     {
         local setting="${1}"
         local ssh_config="${2}"
