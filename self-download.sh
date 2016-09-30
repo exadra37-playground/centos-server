@@ -22,7 +22,10 @@ set -e
 
         if [ ! -z "${script_to_execute}" ]
             then
-                bash "${script_dir}/src/centos7/${script_to_execute}.sh"
+                for file in "$@"
+                    do
+                        bash "${script_dir}/src/centos7/${script_to_execute}.sh"
+                done
         fi
     }
 
