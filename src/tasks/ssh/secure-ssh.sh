@@ -30,7 +30,7 @@ set -e
 
     ssh_user="${1:-$(hostname)}"
     allow_ssh_user='AllowUsers ${ssh_user} # By Exadra37'
-    ssh_config="${ssh_config}"
+    ssh_config=/etc/ssh/sshd_config
 
     allow_tcp_forwarding='AllowTcpForwarding no # By Exadra37'
     verify_reverse_mapping='VerifyReverseMapping yes # By Exadra37'
