@@ -8,7 +8,7 @@ set -e
 
 # function
 
-    Write_To_Ssh_Config()
+    Write_To_Ssh_Config
     {
         local setting="${1}"
         local ssh_config="${2}"
@@ -29,11 +29,7 @@ set -e
 # Get SSH User
 
     ssh_user="${1:-$(hostname)}"
-    allow_ssh_user='AllowUsers ${ssh_user} # By Exadra37'
-    ssh_config=/etc/ssh/sshd_config
 
-    allow_tcp_forwarding='AllowTcpForwarding no # By Exadra37'
-    verify_reverse_mapping='VerifyReverseMapping yes # By Exadra37'
 
 # Set the script dir
 
@@ -52,16 +48,16 @@ set -e
     sed -i 's|X11Forwarding yes|X11Forwarding no # by exadra37|g' "${ssh_config}"
 
     # Disable TCP fowarding
-    Write_To_Ssh_Config() "${allow_tcp_forwarding}" "${ssh_config}" "\n\n#http://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html"
+    Write_To_Ssh_Config "AllowTcpForwarding no # By Exadra37" "${ssh_config}" "\n\n#http://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html"
 
     # Enable Verification of Reverse Mapping
-    Write_To_Ssh_Config() "${verify_reverse_mapping}" "${ssh_config}"
+    Write_To_Ssh_Config "VerifyReverseMapping yes # By Exadra37" "${ssh_config}"
 
     # Only allow users explicit declared
-    Write_To_Ssh_Config() "${allow_ssh_user}" "${ssh_config}"
+    Write_To_Ssh_Config "AllowUsers ${ssh_user} # By Exadra37" "${ssh_config}"
 
     # listen only in IPV4
-    Write_To_Ssh_Config() "AddressFamily inet # By Exadra37" "${ssh_config}"
+    Write_To_Ssh_Config "AddressFamily inet # By Exadra37" "${ssh_config}"
 
     service sshd restart
 
