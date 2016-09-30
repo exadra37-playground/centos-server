@@ -6,11 +6,16 @@
 
 set -e
 
+# Set script dir
+
+    script_dir=$( cd "$( dirname "$0" )" && pwd )
+
+
 # Secure SSH
 
     bash "${script_dir}/../tasks/ssh/secure-ssh.sh"
 
+
 # Install CSF Firewall
 
     bash "${script_dir}/../packages/csf-firewall/setup-csf.sh"
-

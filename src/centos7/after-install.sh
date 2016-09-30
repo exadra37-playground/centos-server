@@ -6,6 +6,11 @@
 
 set -e
 
+# Set script dir
+
+    script_dir=$( cd "$( dirname "$0" )" && pwd )
+
+
 # Install Git
 
     bash "${script_dir}/../packages/git/install-git.sh"
