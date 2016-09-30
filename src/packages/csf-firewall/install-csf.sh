@@ -21,11 +21,9 @@ set -e
 # Install CSF Firewall
 # https://www.howtoforge.com/tutorial/install-and-configure-csf-config-server-firewall-on-centos-7/
 
-    cd /tmp &&
-    curl -O https://download.configserver.com/csf.tgz &&
-    tar -xzf csf.tgz &&
-    cd csf &&
-    bash install.sh &&
+    curl -o /tmp/csf.tgz https://download.configserver.com/csf.tgz &&
+    tar -xzf /tmp/csf.tgz -C /tmp &&
+    bash /tmp/csf/install.sh &&
     perl /usr/local/csf/bin/csftest.pl && # test if CSF is ready to work
     bash /usr/local/csf/bin/remove_apf_bfd.sh && # remove other installed firewalls
     rm -rfv /tmp/csf &&
