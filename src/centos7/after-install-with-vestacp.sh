@@ -24,9 +24,9 @@ set -e
 # Install VestaCP
 
     #bash -i "${script_dir}/../packages/vestacp/install-vestacp.sh"
-    curl -LO https://vestacp.com/pub/vst-install-rhel.sh | bash -
+    curl -L https://vestacp.com/pub/vst-install-rhel.sh | bash -
 
-    bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed VestaCp."
+    bash "${script_dir}/../tasks/git/tracking-etc.sh" "Installed VestaCp."
 
 
 # Install Basic Tools Set
