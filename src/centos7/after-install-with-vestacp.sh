@@ -10,6 +10,7 @@ set -e
 
     script_dir=$( cd "$( dirname "$0" )" && pwd )
 
+printf "\n$script_dir\n"
 
 # Install Git
 
