@@ -13,12 +13,12 @@ set -e
 
 # Install Git
 
-    #bash "${script_dir}/../packages/git/install-git.sh"
+    bash "${script_dir}/../packages/git/install-git.sh"
 
 
 # Secure SSH
 
-    #bash "${script_dir}/../tasks/ssh/secure-ssh.sh"
+    bash "${script_dir}/../tasks/ssh/secure-ssh.sh"
 
 
 # Install VestaCP
