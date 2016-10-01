@@ -23,7 +23,7 @@ set -e
 
 # Install VestaCP
 
-    bash -i "${script_dir}/../packages/vestacp/install-vestacp.sh"
+    "./${script_dir}/../packages/vestacp/install-vestacp.sh"
 
 
 # Install Basic Tools Set
