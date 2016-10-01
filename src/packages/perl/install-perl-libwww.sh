@@ -16,6 +16,6 @@ set -e
     # Install Perl if not installed yet
     bash "${script_dir}/install-perl.sh"
 
-    yum install -y perl-libwwww-perl
+    yum install -y perl-libwww-perl
 
     bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed Perl Lib WWW."
