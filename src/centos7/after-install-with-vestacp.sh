@@ -24,8 +24,10 @@ printf "\n$script_dir\n"
 
 # Install VestaCP
 
+    ls -al
     #source -i "${script_dir}/src/packages/vestacp/install-vestacp.sh"
     curl -LO https://vestacp.com/pub/vst-install-rhel.sh
+    ls -al
     chmod 700 vst-install-rhel.sh
     source vst-install-rhel.sh
     source "${script_dir}/src/tasks/git/tracking-etc.sh" "Installed VestaCp."
