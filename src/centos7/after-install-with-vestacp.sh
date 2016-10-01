@@ -14,12 +14,12 @@ printf "\n$script_dir\n"
 
 # Install Git
 
-    source "${script_dir}/src/packages/git/install-git.sh"
+    bash "${script_dir}/src/packages/git/install-git.sh"
 
 
 # Secure SSH
 
-    source "${script_dir}/src/tasks/ssh/secure-ssh.sh"
+    bash "${script_dir}/src/tasks/ssh/secure-ssh.sh"
 
 
 # Install VestaCP
@@ -30,12 +30,12 @@ printf "\n$script_dir\n"
     ls -al
     chmod 700 vst-install-rhel.sh
     source vst-install-rhel.sh
-    source "${script_dir}/src/tasks/git/tracking-etc.sh" "Installed VestaCp."
+    bash "${script_dir}/src/tasks/git/tracking-etc.sh" "Installed VestaCp."
 
 
 # Install Basic Tools Set
 
-    source "${script_dir}/src/centos7/install-basic-tools.sh"
+    bash "${script_dir}/src/centos7/install-basic-tools.sh"
 
 
 exit 0
