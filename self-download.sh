@@ -17,16 +17,12 @@ set -e
 
     function Self_Execute()
     {
-        local script_to_execute="${1}"
         local script_dir=$( cd "$( dirname "$0" )" && pwd )
 
-        if [ ! -z "${script_to_execute}" ]
-            then
-                for file in "$@"
-                    do
-                        bash "${script_dir}/src/${script_to_execute}.sh"
-                done
-        fi
+        for script_to_execute in "$@"
+            do
+                bash "${script_dir}/src/${script_to_execute}.sh"
+        done
     }
 
 
