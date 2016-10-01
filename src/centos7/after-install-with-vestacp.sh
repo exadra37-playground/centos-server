@@ -26,7 +26,7 @@ set -e
     #bash -i "${script_dir}/../packages/vestacp/install-vestacp.sh"
     curl -LO https://vestacp.com/pub/vst-install-rhel.sh
     chmod 700 vst-install-rhel.sh
-    ./vst-install-rhel.sh
+    source vst-install-rhel.sh
     bash "${script_dir}/../tasks/git/tracking-etc.sh" "Installed VestaCp."
 
 
