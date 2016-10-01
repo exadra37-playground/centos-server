@@ -19,10 +19,10 @@ set -e
     {
         local script_dir=$( cd "$( dirname "$0" )" && pwd )
 
-        for script_to_execute in "$@"
-            do
+        #for script_to_execute in "$@"
+         #   do
                 "${script_dir}/src/${script_to_execute}"
-        done
+        #done
     }
 
 
