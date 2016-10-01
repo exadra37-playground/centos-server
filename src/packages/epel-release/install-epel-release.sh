@@ -19,3 +19,6 @@ set -e
 
             bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed Epel Release."
     fi
+
+
+exit 0

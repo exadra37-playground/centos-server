@@ -36,3 +36,6 @@ set -e
     cd "${vendor}"
 
     Self_Execute "$@"
+
+
+exit 0

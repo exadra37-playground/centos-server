@@ -22,3 +22,6 @@ set -e
 
             bash "${script_dir}/../../tasks/git/start-tracking-etc.sh"
     fi
+
+
+exit 0

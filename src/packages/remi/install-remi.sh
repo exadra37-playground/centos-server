@@ -19,7 +19,11 @@ set -e
 
             curl -LO http://rpms.famillecollet.com/enterprise/remi-release-7.rpm &&
             rpm -Uvh remi-release-7*.rpm &&
-            sed -i "s/enabled=0/enabled=1/g" /etc/yum.repos.d/remi.repo
+            sed -i "s/enabled=0/enabled=1/g" /etc/yum.repos.d/remi.repo &&
+            rm -fv remi-release-7*.rpm
 
             bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed Remi Repository."
     fi
+
+
+exit 0

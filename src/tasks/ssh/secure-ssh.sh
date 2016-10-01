@@ -75,3 +75,6 @@ set -e
 # Tracking changes
 
     bash "${script_dir}/../git/tracking-etc.sh" "Secure SSH by disabling root user and create another user without root privileges."
+
+
+exit 0

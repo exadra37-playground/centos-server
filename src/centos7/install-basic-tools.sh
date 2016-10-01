@@ -10,6 +10,12 @@ set -e
 
     script_dir=$( cd "$( dirname "$0" )" && pwd )
 
+
+# Install Git
+
+    bash "${script_dir}/../packages/git/install-git.sh"
+
+
 # Install Vim
 
     bash "${script_dir}/../packages/vim/install-vim.sh"
@@ -23,3 +29,6 @@ set -e
 # Install Htop
 
     bash "${script_dir}/../packages/htop/install-htop.sh"
+
+
+exit 0

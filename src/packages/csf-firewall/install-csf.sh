@@ -31,3 +31,6 @@ set -e
     rm -rfv /tmp/csf &&
     rm -rfv /tmp/csf.tgz &&
     bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed CSF Firewall."
+
+
+exit 0

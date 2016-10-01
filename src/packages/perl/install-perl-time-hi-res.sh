@@ -20,4 +20,5 @@ set -e
 
     bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed Perl TimeHiRes."
 
-    exit 0
+
+exit 0

@@ -12,3 +12,6 @@ set -e
         then
             cd /etc && git init && git add --all && git commit -m 'Big Bang :)' && cd -
     fi
+
+
+exit 0

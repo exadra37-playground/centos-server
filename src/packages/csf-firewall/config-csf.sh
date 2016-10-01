@@ -64,6 +64,8 @@ set -e
     bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Setup CSF Firewall."
 
 
+exit 0
+
 ## Dependencies
 
     # # Install libwww-perl

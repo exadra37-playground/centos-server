@@ -19,3 +19,6 @@ set -e
 # Install CSF Firewall
 
     bash "${script_dir}/../packages/csf-firewall/setup-csf.sh"
+
+
+exit 0

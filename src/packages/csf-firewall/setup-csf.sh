@@ -19,3 +19,6 @@ set -e
 # Configure CSF Firewall
 
     bash "${script_dir}/config-csf.sh"
+
+
+exit 0

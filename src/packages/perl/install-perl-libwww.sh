@@ -20,4 +20,5 @@ set -e
 
     bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed Perl Lib WWW."
 
-    exit 0
+
+exit 0

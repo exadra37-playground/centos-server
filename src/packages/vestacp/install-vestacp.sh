@@ -26,3 +26,6 @@ set -e
     curl -LO https://vestacp.com/pub/vst-install-rhel.sh && bash vst-install-rhel.sh
 
     bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed VestaCp."
+
+
+exit 0

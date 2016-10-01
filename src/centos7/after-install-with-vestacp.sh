@@ -16,19 +16,14 @@ set -e
     bash "${script_dir}/../packages/git/install-git.sh"
 
 
-# Secure Server
+# Secure SSH
 
-    bash "${script_dir}/secure-server.sh"
-
-
-# Install Epel Release
-
-    bash "${script_dir}/../packages/epel-release/install-epel-release.sh"
+    bash "${script_dir}/../tasks/ssh/secure-ssh.sh"
 
 
-# Install Remi Repository
+# Install VestaCP
 
-    bash "${script_dir}/../packages/remi/install-remi.sh"
+    bash "${script_dir}/../packages/vestacp/install-vestacp.sh"
 
 
 # Install Basic Tools Set
