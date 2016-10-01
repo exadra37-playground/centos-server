@@ -21,7 +21,7 @@ set -e
 
         for script_to_execute in "$@"
             do
-                bash -li "${script_dir}/src/${script_to_execute}"
+                source "${script_dir}/src/${script_to_execute}"
         done
     }
 
