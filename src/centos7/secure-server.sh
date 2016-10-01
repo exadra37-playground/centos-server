@@ -11,6 +11,11 @@ set -e
     script_dir=$( cd "$( dirname "$0" )" && pwd )
 
 
+# Install Git
+
+    bash "${script_dir}/../packages/git/install-git.sh"
+
+
 # Secure SSH
 
     bash "${script_dir}/../tasks/ssh/secure-ssh.sh"
