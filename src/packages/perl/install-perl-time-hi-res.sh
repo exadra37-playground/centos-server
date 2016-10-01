@@ -11,7 +11,7 @@ set -e
     script_dir=$( cd "$( dirname "$0" )" && pwd )
 
 
-# Installing Perl Lib WWW
+# Installing Perl TimeHiRes
 
     # Install Perl if not installed yet
     bash "${script_dir}/install-perl.sh"

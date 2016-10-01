@@ -13,9 +13,9 @@ set -e
 
 # Install Dependencies
 
-    #sh "${script_dir}/../perl/install-perl.sh"
-    #sh "${script_dir}/../perl/install-perl-libwww.sh"
-    #sh "${script_dir}/../perl/install-perl-time-hi-res.sh"
+    bash "${script_dir}/../perl/install-perl.sh"
+    bash "${script_dir}/../perl/install-perl-libwww.sh"
+    bash "${script_dir}/../perl/install-perl-time-hi-res.sh"
 
 
 # Install CSF Firewall
