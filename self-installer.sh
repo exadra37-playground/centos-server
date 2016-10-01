@@ -35,7 +35,7 @@ set -e
     tar -zx -C "${vendor}" --strip-components=1 &&
     cd "${vendor}"
 
-    #Self_Execute "$@"
+    Self_Execute "$@"
 
 
 exit 0
