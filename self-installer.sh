@@ -18,7 +18,7 @@ set -e
     function Self_Execute()
     {
         local script_dir=$( cd "$( dirname "$0" )" && pwd )
-
+        local script_to_execute="${1}"
         #for script_to_execute in "$@"
          #   do
                 "${script_dir}/src/${script_to_execute}"
