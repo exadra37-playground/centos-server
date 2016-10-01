@@ -19,5 +19,3 @@ set -e
 
             bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed Htop."
     fi
-
-exit 0

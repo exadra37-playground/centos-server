@@ -7,5 +7,5 @@ Bash Scripts to perform tasks after OS installation.
 Using CURL in command line:
 
 ```bash
-curl -L https://gitlab.com/exadra37-bash/centos-server/raw/prototype/self-download.sh | bash - after-install
+curl -L https://gitlab.com/exadra37-bash/centos-server/raw/prototype/self-download.sh | bash -s "centos7/after-install" "packages/vestacp/install-vestacp"
 ```

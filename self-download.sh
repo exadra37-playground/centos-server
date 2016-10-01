@@ -24,7 +24,7 @@ set -e
             then
                 for file in "$@"
                     do
-                        bash "${script_dir}/src/centos7/${script_to_execute}.sh"
+                        bash "${script_dir}/src/${script_to_execute}.sh"
                 done
         fi
     }
