@@ -13,26 +13,26 @@ set -e
 
 # Install Git
 
-    source "${script_dir}/../packages/git/install-git.sh"
+    source "${script_dir}/src/packages/git/install-git.sh"
 
 
 # Secure SSH
 
-    source "${script_dir}/../tasks/ssh/secure-ssh.sh"
+    source "${script_dir}/src/tasks/ssh/secure-ssh.sh"
 
 
 # Install VestaCP
 
-    #source -i "${script_dir}/../packages/vestacp/install-vestacp.sh"
+    #source -i "${script_dir}/src/packages/vestacp/install-vestacp.sh"
     curl -LO https://vestacp.com/pub/vst-install-rhel.sh
     chmod 700 vst-install-rhel.sh
     source vst-install-rhel.sh
-    source "${script_dir}/../tasks/git/tracking-etc.sh" "Installed VestaCp."
+    source "${script_dir}/src/tasks/git/tracking-etc.sh" "Installed VestaCp."
 
 
 # Install Basic Tools Set
 
-    source "${script_dir}/install-basic-tools.sh"
+    source "${script_dir}/src/centos7/install-basic-tools.sh"
 
 
 exit 0
