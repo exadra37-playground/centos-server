@@ -21,3 +21,5 @@ set -e
     message="${1:-tracking last changes.}"
 
     cd /etc && git status && git add --all && git commit -m "${message}" && cd -
+
+    exit 0
