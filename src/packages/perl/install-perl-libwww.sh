@@ -19,3 +19,5 @@ set -e
     yum install -y perl-libwww-perl
 
     bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed Perl Lib WWW."
+
+    exit 0

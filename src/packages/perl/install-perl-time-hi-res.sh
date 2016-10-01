@@ -19,3 +19,5 @@ set -e
     yum -y install perl-Time-HiRes
 
     bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed Perl TimeHiRes."
+
+    exit 0
