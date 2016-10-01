@@ -13,26 +13,26 @@ set -e
 
 # Install Git
 
-    bash "${script_dir}/../packages/git/install-git.sh"
+    source "${script_dir}/../packages/git/install-git.sh"
 
 
 # Secure SSH
 
-    bash "${script_dir}/../tasks/ssh/secure-ssh.sh"
+    source "${script_dir}/../tasks/ssh/secure-ssh.sh"
 
 
 # Install VestaCP
 
-    #bash -i "${script_dir}/../packages/vestacp/install-vestacp.sh"
+    #source -i "${script_dir}/../packages/vestacp/install-vestacp.sh"
     curl -LO https://vestacp.com/pub/vst-install-rhel.sh
     chmod 700 vst-install-rhel.sh
     source vst-install-rhel.sh
-    bash "${script_dir}/../tasks/git/tracking-etc.sh" "Installed VestaCp."
+    source "${script_dir}/../tasks/git/tracking-etc.sh" "Installed VestaCp."
 
 
 # Install Basic Tools Set
 
-    bash "${script_dir}/install-basic-tools.sh"
+    source "${script_dir}/install-basic-tools.sh"
 
 
 exit 0
