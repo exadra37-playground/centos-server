@@ -21,7 +21,7 @@ set -e
         local script_to_execute="${1}"
         #for script_to_execute in "$@"
          #   do
-                "${script_dir}/src/${script_to_execute}"
+        bash -s "${script_dir}/src/${script_to_execute}"
         #done
     }
 
