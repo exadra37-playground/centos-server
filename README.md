@@ -11,4 +11,6 @@ curl -L https://gitlab.com/exadra37-bash/centos-server/raw/prototype/self-instal
 
 curl -LO https://gitlab.com/exadra37-bash/centos-server/raw/prototype/self-installer.sh && source self-installer.sh && source src/centos7/after-install-with-vestacp.sh
 
+curl -LO https://gitlab.com/exadra37-bash/centos-server/raw/prototype/self-installer.sh && bash self-installer.sh  "centos7/after-install-with-vestacp.sh"
+
 ```

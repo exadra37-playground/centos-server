@@ -18,10 +18,10 @@ set -e
             then
                 if [ ! -z "${comment}" ]
                     then
-                        printf "${comment}" >> "${ssh_config}"
+                        printf "\n${comment}" >> "${ssh_config}"
                 fi
 
-                printf "${setting}" >> "${ssh_config}"
+                printf "\n${setting}\n" >> "${ssh_config}"
         fi
     }
 
@@ -42,23 +42,23 @@ set -e
     # changing here the default port for SSH, implies also to open it in the firewall
     sed -i 's|#Port 22|Port 8095 # by exadra37|g' "${ssh_config}"
 
+    # listen only in IPV6
+    sed -i 's|#AddressFamily any|AddressFamily inet6 # by exadra37|g' "${ssh_config}"
+
     sed -i 's|#PermitRootLogin yes|PermitRootLogin no # by exadra37|g' "${ssh_config}"
 
-    sed -i 's|#PasswordAuthentication yes|PasswordAuthentication no # by exadra37|g' "${ssh_config}"
+    sed -i 's|PasswordAuthentication yes|PasswordAuthentication no # by exadra37|g' "${ssh_config}"
 
     sed -i 's|X11Forwarding yes|X11Forwarding no # by exadra37|g' "${ssh_config}"
 
     # Disable TCP fowarding
-    Write_To_Ssh_Config "AllowTcpForwarding no # By Exadra37" "${ssh_config}" "\n\n#http://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html"
+    sed -i 's|AllowTcpForwarding yes|AllowTcpForwarding no # by exadra37|g' "${ssh_config}"
 
     # Enable Verification of Reverse Mapping
-    Write_To_Ssh_Config "VerifyReverseMapping yes # By Exadra37" "${ssh_config}"
+    Write_To_Ssh_Config "VerifyReverseMapping yes # By Exadra37" "${ssh_config}" "#http://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html"
 
     # Only allow users explicit declared
     Write_To_Ssh_Config "AllowUsers ${ssh_user} # By Exadra37" "${ssh_config}"
-
-    # listen only in IPV4
-    Write_To_Ssh_Config "AddressFamily inet # By Exadra37" "${ssh_config}"
 
     service sshd restart
 
@@ -69,7 +69,8 @@ set -e
 
     adduser ${ssh_user} &&
     mv /root/.ssh /home/${ssh_user} && # root user have login disabled, using is public key
-    chown -R ${ssh_user}:${ssh_user} /home/${ssh_user}/.ssh
+    chown -R ${ssh_user}:${ssh_user} /home/${ssh_user}/.ssh &&
+    gpasswd -a ${ssh_user} wheel # add to sudoers users
 
 
 # Tracking changes
