@@ -19,16 +19,16 @@ set -e
     {
         local script_dir=$( cd "$( dirname "$0" )" && pwd )
         local script_to_execute="${1}"
-        #for script_to_execute in "$@"
-         #   do
-        source "${script_dir}/src/${script_to_execute}"
-        #done
+        for script_to_execute in "$@"
+            do
+                source "${script_dir}/src/${script_to_execute}"
+        done
     }
 
 
 # Self Download and Optionally execute the bash script provided as argument
 
-    vendor="/home/root/vendor/exadra37-bash/centos-server"
+    vendor="/root/vendor/exadra37-bash/centos-server"
 
     mkdir -p "${vendor}" &&
     curl -L https://gitlab.com/exadra37-bash/centos-server/repository/archive.tar.gz |
@@ -38,4 +38,4 @@ set -e
     Self_Execute "$@"
 
 
-exit 0
+return 0

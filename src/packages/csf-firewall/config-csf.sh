@@ -61,10 +61,10 @@ set -e
     csf -l
 
     # Tracking changes
-    bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Setup CSF Firewall."
+    source "${script_dir}/src/tasks/git/tracking-etc.sh" "Setup CSF Firewall."
 
 
-exit 0
+return 0
 
 ## Dependencies
 

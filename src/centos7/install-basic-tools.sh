@@ -13,22 +13,22 @@ set -e
 
 # Install Git
 
-    bash "${script_dir}/../packages/git/install-git.sh"
+    source "${script_dir}/src/packages/git/install-git.sh"
 
 
 # Install Vim
 
-    bash "${script_dir}/../packages/vim/install-vim.sh"
+    source "${script_dir}/src/packages/vim/install-vim.sh"
 
 
 # Install Zsh
 
-    bash "${script_dir}/../packages/zsh/install-zsh.sh"
+    source "${script_dir}/src/packages/zsh/install-zsh.sh"
 
 
 # Install Htop
 
-    bash "${script_dir}/../packages/htop/install-htop.sh"
+    source "${script_dir}/src/packages/htop/install-htop.sh"
 
 
-exit 0
+return 0

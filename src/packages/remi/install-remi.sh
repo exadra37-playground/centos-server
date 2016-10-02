@@ -22,8 +22,8 @@ set -e
             sed -i "s/enabled=0/enabled=1/g" /etc/yum.repos.d/remi.repo &&
             rm -fv remi-release-7*.rpm
 
-            bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed Remi Repository."
+            source "${script_dir}/src/tasks/git/tracking-etc.sh" "Installed Remi Repository."
     fi
 
 
-exit 0
+return 0

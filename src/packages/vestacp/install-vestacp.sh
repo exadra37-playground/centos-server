@@ -12,7 +12,7 @@ set -e
         then
             printf "\nThis script must be used only in Centos\n"
 
-            exit 1
+            return 1
     fi
 
 
@@ -23,9 +23,11 @@ set -e
 
 # Install Vesta CP
 
-    curl -LO https://vestacp.com/pub/vst-install-rhel.sh && bash -i vst-install-rhel.sh
+    curl -LO https://vestacp.com/pub/vst-install-rhel.sh
 
-    bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed VestaCp."
+    source vst-install-rhel.sh
+
+    source "${script_dir}/src/tasks/git/tracking-etc.sh" "Installed VestaCp."
 
 
-exit 0
+return 0

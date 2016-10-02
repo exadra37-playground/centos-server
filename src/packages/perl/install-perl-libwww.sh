@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/source
 # @author Exadra37(Paulo Silva) <exadra37ingmailpointcom>
 # @since  2016/09/26
 # @link   https://exadra37.com
@@ -14,11 +14,11 @@ set -e
 # Installing Perl Lib WWW
 
     # Install Perl if not installed yet
-    bash "${script_dir}/install-perl.sh"
+    source "${script_dir}/src/packages/perl/install-perl.sh"
 
     yum install -y perl-libwww-perl
 
-    bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed Perl Lib WWW."
+    source "${script_dir}/src/tasks/git/tracking-etc.sh" "Installed Perl Lib WWW."
 
 
-exit 0
+return 0

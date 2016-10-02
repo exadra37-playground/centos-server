@@ -13,7 +13,7 @@ set -e
 
 # We must have already a Git Repository... If not we will Init a new one
 
-    bash "${script_dir}/start-tracking-etc.sh"
+    source "${script_dir}/src/tasks/git/start-tracking-etc.sh"
 
 
 # tracking etc folder
@@ -23,4 +23,4 @@ set -e
     cd /etc && git status && git add --all && git commit -m "${message}" && cd -
 
 
-exit 0
+return 0

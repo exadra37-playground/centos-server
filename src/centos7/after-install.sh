@@ -13,27 +13,27 @@ set -e
 
 # Install Git
 
-    bash "${script_dir}/../packages/git/install-git.sh"
+    source "${script_dir}/src/packages/git/install-git.sh"
 
 
 # Secure Server
 
-    bash "${script_dir}/secure-server.sh"
+    source "${script_dir}/src/centos7/secure-server.sh"
 
 
 # Install Epel Release
 
-    bash "${script_dir}/../packages/epel-release/install-epel-release.sh"
+    source "${script_dir}/src/packages/epel-release/install-epel-release.sh"
 
 
 # Install Remi Repository
 
-    bash "${script_dir}/../packages/remi/install-remi.sh"
+    source "${script_dir}/src/packages/remi/install-remi.sh"
 
 
 # Install Basic Tools Set
 
-    bash "${script_dir}/install-basic-tools.sh"
+    source "${script_dir}/src/centos7/install-basic-tools.sh"
 
 
-exit 0
+return 0

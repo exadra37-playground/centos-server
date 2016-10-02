@@ -13,12 +13,12 @@ set -e
 
 # Install CSF Firewall
 
-    bash "${script_dir}/install-csf.sh"
+    source "${script_dir}/src/packages/csf-firewall/install-csf.sh"
 
 
 # Configure CSF Firewall
 
-    bash "${script_dir}/config-csf.sh"
+    source "${script_dir}/src/packages/csf-firewall/config-csf.sh"
 
 
-exit 0
+return 0

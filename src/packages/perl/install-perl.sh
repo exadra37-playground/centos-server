@@ -17,8 +17,8 @@ set -e
         then
             yum -y install perl
 
-            bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed Perl."
+            source "${script_dir}/src/tasks/git/tracking-etc.sh" "Installed Perl."
     fi
 
 
-exit 0
+return 0

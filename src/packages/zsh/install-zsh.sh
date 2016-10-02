@@ -13,7 +13,7 @@ set -e
 
 # We need git to install Oh-My-Zsh
 
-    bash "${script_dir}/../git/install-git.sh"
+    source "${script_dir}/src/packages/git/install-git.sh"
 
 
 # Install Zsh
@@ -22,13 +22,13 @@ set -e
         then
             yum -y install zsh
 
-            bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed ZSH."
+            source "${script_dir}/src/tasks/git/tracking-etc.sh" "Installed ZSH."
 
             # Enhance Zsh with Oh-my-Zsh
             curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | bash -
 
-            bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed oh-my-zsh to Enhance ZSH."
+            source "${script_dir}/src/tasks/git/tracking-etc.sh" "Installed oh-my-zsh to Enhance ZSH."
     fi
 
 
-exit 0
+return 0

@@ -13,17 +13,17 @@ set -e
 
 # Install Git
 
-    bash "${script_dir}/../packages/git/install-git.sh"
+    source "${script_dir}/src/packages/git/install-git.sh"
 
 
 # Secure SSH
 
-    bash "${script_dir}/../tasks/ssh/secure-ssh.sh"
+    source "${script_dir}/src/tasks/ssh/secure-ssh.sh"
 
 
 # Install CSF Firewall
 
-    bash "${script_dir}/../packages/csf-firewall/setup-csf.sh"
+    source "${script_dir}/src/packages/csf-firewall/setup-csf.sh"
 
 
-exit 0
+return 0

@@ -17,8 +17,8 @@ set -e
         then
             yum -y install htop
 
-            bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed Htop."
+            source "${script_dir}/src/tasks/git/tracking-etc.sh" "Installed Htop."
     fi
 
 
-exit 0
+return 0

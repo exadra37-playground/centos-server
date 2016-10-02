@@ -14,11 +14,11 @@ set -e
 # Installing Perl TimeHiRes
 
     # Install Perl if not installed yet
-    bash "${script_dir}/install-perl.sh"
+    source "${script_dir}/src/packages/perl/install-perl.sh"
 
     yum -y install perl-Time-HiRes
 
-    bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed Perl TimeHiRes."
+    source "${script_dir}/src/tasks/git/tracking-etc.sh" "Installed Perl TimeHiRes."
 
 
-exit 0
+return 0

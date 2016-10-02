@@ -17,8 +17,8 @@ set -e
         then
             yum -y install vim
 
-            bash "${script_dir}/../../tasks/git/tracking-etc.sh" "Installed Vim."
+            source "${script_dir}/src/tasks/git/tracking-etc.sh" "Installed Vim."
     fi
 
 
-exit 0
+return 0

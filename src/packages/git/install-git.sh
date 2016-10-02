@@ -20,8 +20,8 @@ set -e
             git config --global user.email "${USER}@gmail.com"
             git config --global user.name "${USER}"
 
-            bash "${script_dir}/../../tasks/git/start-tracking-etc.sh"
+            source "${script_dir}/src/tasks/git/start-tracking-etc.sh"
     fi
 
 
-exit 0
+return 0
