@@ -4,7 +4,7 @@
 # @link   https://exadra37.com
 # @link   https://gitlab.com/exadra37-bash/centos-server
 
-set -e
+#set -e
 
 # Enable Firewall
 # In case this is a fresh installation default Centos Firewall is disabled
