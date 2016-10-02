@@ -30,9 +30,10 @@ set -e
 
     vendor="/root/vendor/exadra37-bash/centos-server"
 
-    mkdir -p "${vendor}" &&
-    curl -L https://gitlab.com/exadra37-bash/centos-server/repository/archive.tar.gz |
-    tar -zx -C "${vendor}" --strip-components=1 &&
+    mkdir -p "${vendor}"
+
+    curl -L https://gitlab.com/exadra37-bash/centos-server/repository/archive.tar.gz | tar -zx -C "${vendor}" --strip-components=1
+
     cd "${vendor}"
 
     Self_Execute "$@"
