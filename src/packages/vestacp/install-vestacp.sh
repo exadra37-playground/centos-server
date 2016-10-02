@@ -4,7 +4,7 @@
 # @link   https://exadra37.com
 # @link   https://gitlab.com/exadra37-bash/centos-serverr
 
-set -e
+#set -e
 
 # Check OS
 
