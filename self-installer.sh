@@ -37,6 +37,3 @@ set -e
     cd "${vendor}"
 
     Self_Execute "$@"
-
-
-return 0
