@@ -4,6 +4,10 @@
 # @link   https://exadra37.com
 # @link   https://gitlab.com/exadra37-bash/centos-server
 
+# https://www.linode.com/docs/security/securing-your-server
+#https://highon.coffee/blog/security-harden-centos-7/
+#https://wiki.centos.org/HowTos/Network/SecuringSSH
+
 #set -e
 
 # function
@@ -43,7 +47,7 @@
     sed -i 's|#Port 22|Port 8095 # by exadra37|g' "${ssh_config}"
 
     # listen only in IPV6
-    sed -i 's|#AddressFamily any|AddressFamily inet6 # by exadra37|g' "${ssh_config}"
+    sed -i 's|#AddressFamily any|AddressFamily inet # by exadra37|g' "${ssh_config}"
 
     sed -i 's|#PermitRootLogin yes|PermitRootLogin no # by exadra37|g' "${ssh_config}"
 
@@ -76,6 +80,3 @@
 # Tracking changes
 
     source "${script_dir}/src/tasks/git/tracking-etc.sh" "Secure SSH by disabling root user and create another user without root privileges."
-
-
-return 0

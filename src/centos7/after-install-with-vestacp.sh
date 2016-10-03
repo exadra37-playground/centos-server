@@ -27,12 +27,6 @@
 
     read -p "Please take note of your VestaCP credentials and URL. Press any key to continue Installer."
 
-    # curl -LO https://vestacp.com/pub/vst-install-rhel.sh
-    # ls -al
-    # chmod 700 vst-install-rhel.sh
-    # source vst-install-rhel.sh
-    # bash "${script_dir}/src/tasks/git/tracking-etc.sh" "Installed VestaCp."
-
 
 # Install CSF Firewall
 
@@ -42,6 +36,3 @@
 # Install Basic Tools Set
 
     source "${script_dir}/src/centos7/install-basic-tools.sh"
-
-
-return 0

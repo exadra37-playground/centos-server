@@ -29,6 +29,3 @@ set -e
 # Install Htop
 
     source "${script_dir}/src/packages/htop/install-htop.sh"
-
-
-return 0
