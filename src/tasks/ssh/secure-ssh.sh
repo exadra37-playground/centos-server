@@ -66,6 +66,10 @@
 
     service sshd restart
 
+    #semanage port -a -t ssh_port_t -p tcp 8095
+    firewall-cmd --permanent --add-port=8095/tcp
+    firewall-cmd --reload
+
 
 ## Create User
 

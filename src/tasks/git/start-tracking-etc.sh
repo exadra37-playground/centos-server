@@ -6,6 +6,11 @@
 
 #set -e
 
+# Install Git
+
+    source "${script_dir}/src/packages/git/install-git.sh"
+
+
 ## Start tracking etc folder, but only if is not already being tracked
 
     if [ ! -e '/etc/.git' ]
