@@ -4,7 +4,7 @@
 # @link   https://exadra37.com
 # @link   https://gitlab.com/exadra37-bash/centos-server
 
-set -e
+#set -e
 
 # Set the script dir
 
@@ -63,8 +63,6 @@ set -e
     # Tracking changes
     source "${script_dir}/src/tasks/git/tracking-etc.sh" "Setup CSF Firewall."
 
-
-return 0
 
 ## Dependencies
 

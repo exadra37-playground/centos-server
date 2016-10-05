@@ -28,6 +28,3 @@
     source vst-install-rhel.sh
 
     source "${script_dir}/src/tasks/git/tracking-etc.sh" "Installed VestaCp."
-
-
-return 0

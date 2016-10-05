@@ -4,7 +4,7 @@
 # @link   https://exadra37.com
 # @link   https://gitlab.com/exadra37-bash/centos-server
 
-set -e
+#set -e
 
 # Set the script dir
 
@@ -19,6 +19,3 @@ set -e
 # Configure CSF Firewall
 
     source "${script_dir}/src/packages/csf-firewall/config-csf.sh"
-
-
-return 0

@@ -4,7 +4,7 @@
 # @link   https://exadra37.com
 # @link   https://gitlab.com/exadra37-bash/centos-server
 
-set -e
+#set -e
 
 # Set the script dir
 
@@ -19,6 +19,3 @@ set -e
 
             source "${script_dir}/src/tasks/git/tracking-etc.sh" "Installed Epel Release."
     fi
-
-
-return 0

@@ -4,7 +4,7 @@
 # @link   https://exadra37.com
 # @link   https://gitlab.com/exadra37-bash/centos-server
 
-set -e
+#set -e
 
 # Set the script dir
 
@@ -31,6 +31,3 @@ set -e
     rm -rfv /tmp/csf &&
     rm -rfv /tmp/csf.tgz &&
     source "${script_dir}/src/tasks/git/tracking-etc.sh" "Installed CSF Firewall."
-
-
-return 0

@@ -4,7 +4,7 @@
 # @link   https://exadra37.com
 # @link   https://gitlab.com/exadra37-bash/centos-server
 
-set -e
+#set -e
 
 # Set script dir
 
@@ -34,6 +34,3 @@ set -e
 # Install Basic Tools Set
 
     source "${script_dir}/src/centos7/install-basic-tools.sh"
-
-
-return 0
