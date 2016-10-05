@@ -29,6 +29,10 @@
         fi
     }
 
+# We must have already a Git Repository... If not we will Init a new one
+
+    source "${script_dir}/src/tasks/git/start-tracking-etc.sh"
+
 
 # Get SSH User
 
