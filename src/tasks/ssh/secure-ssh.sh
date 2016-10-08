@@ -81,8 +81,8 @@
 
     adduser ${ssh_user} &&
     mv /root/.ssh /home/${ssh_user} && # root user have login disabled, using is public key
-    chown -R ${ssh_user}:${ssh_user} /home/${ssh_user}/.ssh &&
-    gpasswd -a ${ssh_user} wheel # add to sudoers users
+    chown -R ${ssh_user}:${ssh_user} /home/${ssh_user}/.ssh #&&
+    #gpasswd -a ${ssh_user} wheel # add to sudoers users
 
 
 # Tracking changes
