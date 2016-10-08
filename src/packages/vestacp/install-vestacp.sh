@@ -53,4 +53,4 @@
     printf "\nUser: admin"
     printf "\nNew Password: ${password}"
 
-    printf "\nOld Admin Password sent by Vesta Installation, over email in clear text is a clear violation of Best Security practices, therefore the above one must be used to login.\n"
+    printf "\n\n---> Old Admin Password sent by Vesta Installation, over email in clear text is a clear violation of Best Security practices, therefore the above one must be used to login. <--- \n\n"
