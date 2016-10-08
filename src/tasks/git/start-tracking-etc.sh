@@ -20,7 +20,7 @@
 
     if [ ! -e '/etc/.git' ]
         then
-            cd /etc && git init && git add --all && git commit -m 'Big Bang :)' && cd "{$script_dir}"
+            cd /etc && git init && git add --all && git commit -m 'Big Bang :)' && cd "${script_dir}"
     fi
 
 

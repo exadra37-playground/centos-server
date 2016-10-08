@@ -65,7 +65,7 @@
 ## Setup
 
     # changing here the default port for SSH, implies also to open it in the firewall
-    sed -i 's|#Port 22|Port ${ssh_port} # by exadra37|g' "${ssh_config}"
+    sed -i "s|#Port 22|Port ${ssh_port} # by exadra37|g" "${ssh_config}"
 
     # listen only in IPV6
     sed -i 's|#AddressFamily any|AddressFamily inet # by exadra37|g' "${ssh_config}"
@@ -144,4 +144,4 @@
 
     printf "\nNew Login: ssh -p ${ssh_port} ${ssh_user}@${ip}"
     printf "\nSwitch to root user: su -"
-    printf "\nUse this Password: ${one_time_password}"
+    printf "\nUse this Password: ${one_time_password}\n\n"
