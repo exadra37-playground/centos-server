@@ -20,6 +20,6 @@
 
     message="${1:-tracking last changes.}"
 
-    cd /etc && git status && git add --all && git commit -m "${message}" && cd -
+    cd /etc && git status && git add --all && git commit -m "${message}" && cd "{$script_dir}"
 
 return 0

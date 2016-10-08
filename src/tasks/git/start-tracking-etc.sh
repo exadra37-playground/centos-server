@@ -6,6 +6,11 @@
 
 #set -e
 
+# Set the script dir
+
+    script_dir=$( cd "$( dirname "$0" )" && pwd )
+
+
 # Install Git
 
     source "${script_dir}/src/packages/git/install-git.sh"
@@ -15,5 +20,8 @@
 
     if [ ! -e '/etc/.git' ]
         then
-            cd /etc && git init && git add --all && git commit -m 'Big Bang :)' && cd -
+            cd /etc && git init && git add --all && git commit -m 'Big Bang :)' && cd "{$script_dir}"
     fi
+
+
+return 0
