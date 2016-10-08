@@ -49,7 +49,7 @@
 
     if [ ! -f "${ssh_authorized_keys}" ] || [ ! -s "${ssh_authorized_keys}" ]
         then
-            printf "${ssh_authorized_keys} must exist and contain at least one public key."
+            printf "\n\n--->${ssh_authorized_keys} must exist and contain at least one public key. <---\n\n"
 
             printf "\nHow to Copy SSH public key: ssh-copy-id -p ${ssh_port} -i ~/.ssh/id_rsa.pub ${ssh_user}@${ip}"
 
@@ -114,7 +114,7 @@
     #       $ echo john-doe | sha512sum | head -c 12
     #       b064bb942bd6 # this password will match $one_time_password
     #
-    one_time_password=$($ssh_user | sha512sum | head -c 12)
+    one_time_password=$(echo $ssh_user | sha512sum | head -c 12; echo)
 
     # Once root user have now direct login disabled, we need another user to ssh into the server
     adduser ${ssh_user} &&
