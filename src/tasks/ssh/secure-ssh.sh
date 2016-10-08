@@ -122,8 +122,8 @@
     chown -R ${ssh_user}:${ssh_user} /home/${ssh_user}/.ssh
 
     # set passwords
-    passwd root $one_time_password
-    passwd $ssh_user $one_time_password
+    echo $one_time_password | passwd root --stdin
+    echo $one_time_password | passwd $ssh_user --stdin
 
     # upon next login passwords must be changed
     passwd -e root
